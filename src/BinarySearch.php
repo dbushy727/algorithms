@@ -12,7 +12,7 @@ class BinarySearch extends Algorithm implements SearchAlgorithmInterface
         $max = count($array) - 1;
 
         while ($max >= $min) {
-            $midpoint = (int) floor(($max + $min) / 2);
+            $midpoint = $this->getMidpoint($min, $max);
 
             if ($array[$midpoint] === $target) {
                 return $midpoint;
@@ -28,5 +28,10 @@ class BinarySearch extends Algorithm implements SearchAlgorithmInterface
         }
 
         return -1;
+    }
+
+    public function getMidpoint($min, $max)
+    {
+        return (int) floor(($min + $max) / 2);
     }
 }

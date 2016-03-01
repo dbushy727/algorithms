@@ -2,8 +2,8 @@
 
 require 'vendor/autoload.php';
 
-use Algorithm\BinarySearch;
-use Algorithm\LinearSearch;
+use Algorithm\Search\BinarySearch;
+use Algorithm\Search\LinearSearch;
 
 $linear_search = new LinearSearch;
 $binary_search = new BinarySearch;

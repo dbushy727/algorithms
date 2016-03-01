@@ -12,7 +12,7 @@ class BinarySearch extends Algorithm implements SearchAlgorithmInterface
         $max = count($array) - 1;
 
         while ($max >= $min) {
-            $midpoint = floor(($max + $min) / 2);
+            $midpoint = (int) floor(($max + $min) / 2);
 
             if ($array[$midpoint] === $target) {
                 return $midpoint;

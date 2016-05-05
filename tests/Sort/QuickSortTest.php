@@ -10,7 +10,7 @@ class QuickSortTest extends \PHPUnit_Framework_TestCase
     public function it_can_sort_an_array_in_ascending_order()
     {
         // Create the array and randomize it
-        $array = range(1, 100);
+        $array = range(1, 1000);
         shuffle($array);
 
         // Sort the array

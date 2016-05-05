@@ -16,7 +16,8 @@ class SelectionSort implements Sorter
         $min_index = $start_index;
         $min_value = $array[$min_index];
 
-        for ($index = $min_index + 1; $index < count($array); $index++) {
+        $count = count($array);
+        for ($index = $min_index + 1; $index < $count; $index++) {
             if ($array[$index] < $min_value) {
                 $min_index = $index;
                 $min_value = $array[$min_index];
@@ -28,7 +29,8 @@ class SelectionSort implements Sorter
 
     public function sort(array &$array)
     {
-        for ($index = 0; $index < count($array); $index++) {
+        $count = count($array);
+        for ($index = 0; $index < $count; $index++) {
             $min_index = $this->minIndex($array, $index);
             $this->swap($array, $index, $min_index);
         }

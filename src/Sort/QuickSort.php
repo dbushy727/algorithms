@@ -10,17 +10,20 @@ class QuickSort implements Sorter
             return $data;
         }
 
-        $left = [];
+        $left  = [];
+        $pivot = $data[0];
         $right = [];
 
-        foreach (array_slice($data, 1) as $item) {
-            if ($item <= $data[0]) {
+        $current_slice = array_slice($data, 1);
+
+        foreach ($current_slice as $item) {
+            if ($item <= $pivot) {
                 $left[] = $item;
             } else {
                 $right[] = $item;
             }
         }
 
-        return $data = array_merge($this->sort($left), [$data[0]], $this->sort($right));
+        return $data = array_merge($this->sort($left), [$pivot], $this->sort($right));
     }
 }

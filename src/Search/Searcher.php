@@ -2,7 +2,7 @@
 
 namespace Algorithm\Search;
 
-interface SearchAlgorithmInterface
+interface Searcher
 {
     /**
      * Define a search function with an input array and a target value

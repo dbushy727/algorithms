@@ -2,7 +2,7 @@
 
 namespace Algorithm\Search;
 
-class LinearSearch implements SearchAlgorithmInterface
+class LinearSearch implements Searcher
 {
     /**
      * Search for target within input utilizing linear search algorithm

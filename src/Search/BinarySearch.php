@@ -2,7 +2,7 @@
 
 namespace Algorithm\Search;
 
-class BinarySearch implements SearchAlgorithmInterface
+class BinarySearch implements Searcher
 {
     /**
      * Search for target within input utilizing binary search algorithm

@@ -17,17 +17,18 @@ class BinarySearch implements Searcher
         $max = count($array) - 1;
 
         while ($max >= $min) {
-            $midpoint = $this->getMidpoint($min, $max);
+            $midpoint       = $this->getMidpoint($min, $max);
+            $midpoint_value = $array[$midpoint];
 
-            if ($array[$midpoint] === $target) {
+            if ($midpoint_value === $target) {
                 return $midpoint;
             }
 
-            if ($array[$midpoint] < $target) {
+            if ($midpoint_value < $target) {
                 $min = $midpoint + 1;
             }
 
-            if ($array[$midpoint] > $target) {
+            if ($midpoint_value > $target) {
                 $max = $midpoint - 1;
             }
         }

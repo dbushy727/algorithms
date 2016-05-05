@@ -4,6 +4,14 @@ namespace Algorithm\Sort;
 
 class SelectionSort implements Sorter
 {
+    /**
+     * Swap two items in an array
+     *
+     * @param  array  &$array
+     * @param  int $first_index
+     * @param  int $second_index
+     * @return void
+     */
     public function swap(array &$array, $first_index, $second_index)
     {
         $first_value            = $array[$first_index];
@@ -11,6 +19,13 @@ class SelectionSort implements Sorter
         $array[$second_index]   = $first_value;
     }
 
+    /**
+     * Find the index position with the smallest value in the array
+     *
+     * @param  array  $array
+     * @param  int $start_index
+     * @return int
+     */
     public function minIndex(array $array, $start_index)
     {
         $min_index = $start_index;
@@ -28,6 +43,12 @@ class SelectionSort implements Sorter
         return $min_index;
     }
 
+    /**
+     * Sort the array using the Selection Sort algorithm
+     *
+     * @param  array  &$array
+     * @return void
+     */
     public function sort(array &$array)
     {
         foreach ($array as $index => $value) {

@@ -13,9 +13,9 @@ class LinearSearch implements Searcher
      */
     public function search(array $array, $target)
     {
-        for ($i = 0; $i < count($array); $i++) {
-            if ($array[$i] === $target) {
-                return $i;
+        foreach ($array as $index => $value) {
+            if ($value === $target) {
+                return $index;
             }
         }
 

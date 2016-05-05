@@ -5,10 +5,10 @@ namespace Algorithm\Sort;
 class QuickSort implements Sorter
 {
     /**
-     * Sort items in the array using the Quicksort algorithm
+     * Sort the array using the Quicksort algorithm
      *
      * @param  array  &$data
-     * @return void
+     * @return array
      */
     public function sort(array &$data)
     {
@@ -30,6 +30,6 @@ class QuickSort implements Sorter
             }
         }
 
-        return array_merge($this->sort($left), [$pivot], $this->sort($right));
+        return $data = array_merge($this->sort($left), [$pivot], $this->sort($right));
     }
 }

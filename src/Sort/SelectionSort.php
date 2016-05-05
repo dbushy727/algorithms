@@ -47,7 +47,7 @@ class SelectionSort implements Sorter
      * Sort the array using the Selection Sort algorithm
      *
      * @param  array  &$array
-     * @return void
+     * @return array
      */
     public function sort(array &$array)
     {
@@ -55,5 +55,7 @@ class SelectionSort implements Sorter
             $min_index = $this->minIndex($array, $index);
             $this->swap($array, $index, $min_index);
         }
+
+        return $array;
     }
 }
